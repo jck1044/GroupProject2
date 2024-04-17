@@ -1,4 +1,30 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(120, 200, 240);
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
   text-align: center;
+  padding: 1%;
+}
+
+button {
+  padding: 0.5%;
+  margin: 0.5%;
+  font-size: 90%;
+}
+
+button.correct {
+  background-color: rgb(83, 202, 83);
+  color: black;
+}
+
+button.incorrect {
+  background-color: rgb(247, 69, 69);
+  color: black;
 }
