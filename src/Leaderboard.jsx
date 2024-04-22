@@ -21,10 +21,13 @@ const Leaderboard = ({ numCorrect }) => {
         ...leaderboard,
         { name: playerName, score: numCorrect },
       ];
-      setLeaderboard(updatedLeaderboard);
+      const sortedLeaderboard = updatedLeaderboard.sort(
+        (a, b) => b.score - a.score,
+      ); // Sort by score descending
+      setLeaderboard(sortedLeaderboard);
       setSubmitted(true);
       // Save leaderboard to localStorage
-      localStorage.setItem("leaderboard", JSON.stringify(updatedLeaderboard));
+      localStorage.setItem("leaderboard", JSON.stringify(sortedLeaderboard));
     }
   };
 
