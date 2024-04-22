@@ -5,6 +5,7 @@ import Quote from "./Quote";
 import Score from "./Score";
 import EndGame from "./EndGame";
 import Button from "./Button";
+import Leaderboard from "./Leaderboard";
 
 export default function App() {
   const [numCorrect, setNumCorrect] = useState(0);
@@ -28,6 +29,7 @@ export default function App() {
     return (
       <div className="App">
         <EndGame numCorrect={numCorrect} numAsked={numAsked} />
+        <Leaderboard numCorrect={numCorrect} numAsked={numAsked} />
         <Button
           handler={() => {
             setNumCorrect(0), setNumAsked(0);
